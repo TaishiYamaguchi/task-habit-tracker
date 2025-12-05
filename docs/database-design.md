@@ -20,7 +20,7 @@ The database follows a **normalized relational design** using PostgreSQL. The sc
 ┌─────────────────────────────────────────────────────────────────┐
 │                         Users                                    │
 ├─────────────────────────────────────────────────────────────────┤
-│ PK │ id              │ BIGINT AUTO_INCREMENT                    │
+│ PK │ id              │ BIGSERIAL (auto-increment)               │
 │    │ username        │ VARCHAR(50) NOT NULL UNIQUE               │
 │    │ email           │ VARCHAR(255) NOT NULL UNIQUE              │
 │    │ password_hash   │ VARCHAR(255) NOT NULL                     │
@@ -33,7 +33,7 @@ The database follows a **normalized relational design** using PostgreSQL. The sc
 ┌─────────────────────────────────────────────────────────────────┐
 │                         Tasks                                    │
 ├─────────────────────────────────────────────────────────────────┤
-│ PK │ id              │ BIGINT AUTO_INCREMENT                    │
+│ PK │ id              │ BIGSERIAL (auto-increment)               │
 │ FK │ user_id         │ BIGINT NOT NULL → Users.id               │
 │    │ title           │ VARCHAR(255) NOT NULL                     │
 │    │ description     │ TEXT                                      │
