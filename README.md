@@ -97,6 +97,31 @@ docker-compose up -d
 - [技術スタック詳細](docs/tech-stack.md) - 使用技術の詳細説明
 - [アーキテクチャ設計](docs/architecture.md) - システムアーキテクチャ概要
 - [データベース設計](docs/database-design.md) - データベーススキーマとER図
+- [Agent Skills 開発方針](docs/development/agent-skills.md) - AI支援ツールの活用方針
+
+## 🤖 開発方針 / Development Policy
+
+このプロジェクトでは、GitHub Copilot などの AI 支援ツール（Agent Skills）を積極的に活用し、開発効率とドキュメント品質の向上を図ります。
+
+This project actively uses AI assistance tools (Agent Skills, e.g. GitHub Copilot) to improve development efficiency and documentation quality.
+
+### 基本方針 / Principles
+
+- AI 支援はドキュメント整備を最優先として開始します。  
+  AI assistance starts with documentation improvements as the top priority.
+
+- AI は小さな変更（ドキュメント・テスト・リファクタリング）を実装し、Pull Request を作成することがあります。  
+  AI may implement small changes (docs / tests / refactors) and open pull requests.
+
+- 「小さな変更」とは、外部から観察できる振る舞いを変えない（behavior-preserving）かつスコープが限定的な変更を指します。数値的な閾値は設けません。  
+  "Small changes" means behavior-preserving modifications with a limited, well-defined scope. No numeric thresholds are imposed.
+
+- マージの最終判断は常に人間（メンテナー）が行います。メンテナーがすべての変更に責任を持ちます。  
+  Humans review and decide on merges; maintainers are accountable for all changes.
+
+詳細は [docs/development/agent-skills.md](docs/development/agent-skills.md) を参照してください。
+
+For full details, see [docs/development/agent-skills.md](docs/development/agent-skills.md).
 
 ## 🤝 コントリビューション / Contributing
 
